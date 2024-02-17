@@ -15,8 +15,8 @@ export const clientRegister= async (req,res)=>{
         console.log('heloooooooooooooooo');
         let {name,email,phonenumber,password}=req.body
         console.log(req.body);
-        const newUser=await userSchema.create({name,email,phonenumber,password})
-        console.log(newUser);
+        let newUser=await userSchema.create({name,email,phonenumber,password})
+        console.log(newUser,'user createdddddddddddddddd');
     } catch (error) {
         
     }
