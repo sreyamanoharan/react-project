@@ -12,11 +12,11 @@ export const login=async (req,res)=>{
 
 export const clientRegister= async (req,res)=>{
     try {
-        console.log('heloooooooooooooooo');
-        let {name,email,phonenumber,password}=req.body
         console.log(req.body);
-        let newUser=await userSchema.create({name,email,phonenumber,password})
-        console.log(newUser,'user createdddddddddddddddd');
+        console.log('heloooooooooooooooo');
+        const {name,email,phonenumber,password}=req.body
+        const newUser=await userSchema.create({name,email,phonenumber,password})
+        console.log(newUser);
     } catch (error) {
         
     }

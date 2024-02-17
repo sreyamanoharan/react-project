@@ -6,8 +6,8 @@ import mongoose from 'mongoose'
 
 const app=express()
 
-app.use(express.json())
 
+app.use(express.json());
 app.get('/',(req,res)=>{
     res.send('server ready')
 })
@@ -17,7 +17,6 @@ app.use(cors({
    methods: ["GET", "POST","PATCH","PUT" ],
    credentials: true,
  }));
-
 app.use('/', userRoute)
 
 const port=process.env.PORT ||  3000;
