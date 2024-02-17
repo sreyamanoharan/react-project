@@ -2,20 +2,20 @@ import mongoose from "mongoose";
 
 const userSchema= new mongoose.Schema ({
       name:{
-        type:String
+        type:"string"
       },
       email:{
-        type:String
+        type:"string"
       },
       phonenumber:{
-        type:String
+        type:"string"
       },
       password:{
-        type:String
+        type:"string"
       },
-      isVerified:{
-        type:Boolean
-      }
+      // isVerified:{
+      //   type:Boolean
+      // }
 },
 {
     timestamps:true
@@ -24,4 +24,4 @@ const userSchema= new mongoose.Schema ({
 const User= mongoose.model('User',userSchema)
 
 
-export default userSchema
+export default User
